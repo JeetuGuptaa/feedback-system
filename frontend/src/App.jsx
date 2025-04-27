@@ -1,15 +1,23 @@
-import { useState } from 'react'
+import React from 'react';
+import { Layout, Typography, Divider } from 'antd';
+import FeedbackForm from './components/FeedbackForm';
+import FeedbackDashboard from './components/FeedbackDashboard';
 
-function App() {
-  const [count, setCount] = useState(0)
+const { Header, Content } = Layout;
+const { Title } = Typography;
 
+export default function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-      Frontend is up and running!
-    </h1>
-    </>
-  )
-}
+    <Layout className="min-h-screen">
+      <Header className="bg-white shadow-sm">
+        <Title level={3} className="text-center text-gray-800">User Feedback System</Title>
+      </Header>
 
-export default App
+      <Content className="p-6 max-w-5xl mx-auto space-y-8">
+        <FeedbackForm />
+        <Divider />
+        <FeedbackDashboard />
+      </Content>
+    </Layout>
+  );
+}
