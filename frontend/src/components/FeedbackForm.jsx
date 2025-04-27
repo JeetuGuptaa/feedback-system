@@ -24,7 +24,7 @@ export default function FeedbackForm() {
       form={form}
       layout="vertical"
       onFinish={onFinish}
-      className="bg-white p-6 rounded-lg shadow-md"
+      className="bg-white p-6 rounded-lg shadow-md w-[30vw] w-min-[300px]"
     >
       <Form.Item
         name="name"
